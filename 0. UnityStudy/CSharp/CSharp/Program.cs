@@ -10,9 +10,8 @@ namespace CSharp
             Console.WriteLine("HelloWorld!");
             int hp;
 
-            //byte(1바이트) short(2바이트) int(4바이트) long(8바이트)
-            //sbytr ushort uint ulong
-
+            //byte(1바이트 0~255) short(2바이트 -3만~3만) int(4바이트 -21억~21억) long(8바이트)
+            //sbyte(1바이트 -128~127) ushort(2바이트 0~6만) uint(4바이트0~43억) ulong(8바이트)
 
             hp = 100;
 
