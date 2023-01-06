@@ -9,6 +9,7 @@ namespace CSharp
         //
         static void Main(string[] args)
         {
+
             Random rand = new Random();
             int aiChoice = rand.Next(0, 3); // 0~2  사이의 값
 
@@ -39,16 +40,32 @@ namespace CSharp
                     break;
             }
 
+            //if (choice == aiChoice) Console.WriteLine("무승부입니다.");
+            //else
+            //{
+            //    switch(choice)
+            //    {
+            //        case 0:
+            //            if (aiChoice == 1) Console.WriteLine("당신이 졌습니다.");
+            //            else Console.WriteLine("당신이 이겼습니다.");
+            //            break;
+            //        case 1:
+            //            if (aiChoice == 2) Console.WriteLine("당신이 졌습니다.");
+            //            else Console.WriteLine("당신이 이겼습니다.");
+            //            break;
+            //        case 2:
+            //            if (aiChoice == 0) Console.WriteLine("당신이졌습니다.");
+            //            else Console.WriteLine("당신이 이겼습니다/");
+            //            break;
+            //    }
+            //}
+
+            //이게 더 좋은 것 같다
             if (choice == aiChoice) Console.WriteLine("무승부입니다.");
-            else
-            {
-                if(choice == 0 && aiChoice == 1) Console.WriteLine("당신이 졌습니다.");
-                else Console.WriteLine("당신이 이겼습니다.");
-                if (choice == 1 && aiChoice == 2) Console.WriteLine("당신이 졌습니다.");
-                else Console.WriteLine("당신이 이겼습니다.");
-                if (choice == 2 && aiChoice == 0) Console.WriteLine("당신이 졌습니다.");
-                else Console.WriteLine("당신이 이겼습니다.");
-            }
+            else if (choice == 0 && aiChoice == 1) Console.WriteLine("당신이 졌습니다.");
+            else if (choice == 1 && aiChoice == 2) Console.WriteLine("당신이 졌습니다.");
+            else if (choice == 2 && aiChoice == 0) Console.WriteLine("당신이 졌습니다.");
+            else Console.WriteLine("당신이 이겼습니다.");
         }
     }
 }
