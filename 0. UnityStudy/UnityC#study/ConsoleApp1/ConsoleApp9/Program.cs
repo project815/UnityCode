@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Globalization;
+using System.Net.Http.Headers;
+using System.Threading;
 
 namespace CSharp
 {
@@ -13,8 +15,19 @@ namespace CSharp
             Archer = 2,
             Mage = 3,
         }
+        enum MonsterType
+        {
+            Slime = 0,
+            Orc = 1,
+            Skeleton = 2,
+        }
 
         struct Player
+        {
+            public int hp;
+            public int attack;
+        }
+        struct Monster
         {
             public int hp;
             public int attack;
@@ -44,7 +57,7 @@ namespace CSharp
             }
             return job;
         }
-        static void CreateUnit(Job job, out Player player)
+        static void CreatePlayer(Job job, out Player player)
         {
             //
             switch(job)
@@ -68,21 +81,92 @@ namespace CSharp
                     break;
             }
         }
+
+        static void CreateRandomMonster(out Monster monster)
+        {
+            Random rand = new Random();
+            int randMonster = rand.Next(1, 4);
+
+            switch(randMonster)
+            {
+                case (int)MonsterType.Slime:
+                    Console.WriteLine("슬라임이 나타났습니다.");
+                    monster.hp = 20;
+                    monster.attack = 2;
+                    break;
+                case (int)MonsterType.Orc:
+                    Console.WriteLine("오크가 나타났습니다.");
+                    monster.hp = 40;
+                    monster.attack = 4;
+                    break;
+                case (int)MonsterType.Skeleton:
+                    Console.WriteLine("스켈레톤이 나타났습니다.");
+                    monster.hp = 30;
+                    monster.attack = 3;
+                    break;
+                default:
+                    monster.hp = 0;
+                    monster.attack = 0;
+                    break;
+            }
+
+        }
+        static void EnterGame()
+        {
+            while(true)
+            {
+                Console.WriteLine("마을에 접속했습니다.");
+                Console.WriteLine("[1] 필드로 간다");
+                Console.WriteLine("[2] 로비로 돌아가기");
+
+                string input = Console.ReadLine();
+
+                //로직 1.
+                if(input == "1")
+                {
+                    EnterField();
+                }
+                else if(input == "2")
+                {
+                    break;
+                }
+
+                //로직 2.
+                //switch(input)
+                //{
+                //    case " 1":
+                //        //EnterField();
+                //        break;
+                //    case "2":
+                //        return; //switch문 안에서 break로는 while을 못 벗어남.
+                //}
+            }
+        }
+
+        static void EnterField()
+        {
+            Console.WriteLine("필드에 접속했습니다.!");
+            Monster monster;
+            CreateRandomMonster(out monster);
+            Console.WriteLine("[1] 전투 모드로 돌입");
+            Console.WriteLine("[2] 일정확률로 마을로 도망");
+
+        }
         static void Main(string[] args)
         {
             Player player;
 
             Job job = Job.None;
 
-            int hp;
-            int attack;
-
-            while (job == Job.None)
+            while (true)
             {
                 job = ChooseJob();
 
-                CreateUnit(job, out player);
-                Console.WriteLine($"hp : {player.hp} attack : {player.attack}");
+                if(job != Job.None)
+                {
+                    CreatePlayer(job, out player);
+                    EnterGame();
+                }
             }
         }
     }
