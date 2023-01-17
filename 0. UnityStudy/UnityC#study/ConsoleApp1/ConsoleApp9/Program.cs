@@ -111,7 +111,7 @@ namespace CSharp
             }
 
         }
-        static void EnterGame()
+        static void EnterGame(ref Player player)
         {
             while(true)
             {
@@ -124,7 +124,7 @@ namespace CSharp
                 //로직 1.
                 if(input == "1")
                 {
-                    EnterField();
+                    EnterField (ref player);
                 }
                 else if(input == "2")
                 {
@@ -142,8 +142,29 @@ namespace CSharp
                 //}
             }
         }
+        static void Fight(ref Player player, ref Monster monster)
+        {
+            while(true)
+            {
+                //플레이어가 몬스터 공격
+                monster.hp -= player.attack;
+                if(monster.hp <= 0)
+                {
+                    Console.WriteLine("승리했습니다.");
+                    Console.WriteLine($"남은 체력 : {player.hp}");
+                    break;
+                }
 
-        static void EnterField()
+                player.hp -= monster.attack;
+                if(player.hp <= 0)
+                {
+                    Console.WriteLine("졌습니다.");
+                    break;
+                }
+
+            }
+        }
+        static void EnterField(ref Player player)
         {
             Console.WriteLine("필드에 접속했습니다.!");
             Monster monster;
@@ -151,6 +172,26 @@ namespace CSharp
             Console.WriteLine("[1] 전투 모드로 돌입");
             Console.WriteLine("[2] 일정확률로 마을로 도망");
 
+            string input = Console.ReadLine();
+            if(input =="1")
+            {
+                Fight(ref player, ref monster);
+            }
+            else if(input =="2") 
+            {
+                //33%
+                Random rand = new Random();
+                int randValue = rand.Next(0, 101);
+
+                if(randValue <= 33)
+                {
+                    Console.WriteLine("도망치는데 성공했습니다.");
+                }
+                else
+                {
+                    Fight(ref player, ref monster);
+                }
+            }
         }
         static void Main(string[] args)
         {
@@ -165,7 +206,7 @@ namespace CSharp
                 if(job != Job.None)
                 {
                     CreatePlayer(job, out player);
-                    EnterGame();
+                    EnterGame(ref player);
                 }
             }
         }
