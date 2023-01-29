@@ -1,0 +1,15 @@
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\bin\Debug\net6.0\ConsoleApp18.exe
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\bin\Debug\net6.0\ConsoleApp18.deps.json
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\bin\Debug\net6.0\ConsoleApp18.runtimeconfig.json
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\bin\Debug\net6.0\ConsoleApp18.dll
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\bin\Debug\net6.0\ConsoleApp18.pdb
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.AssemblyInfoInputs.cache
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.AssemblyInfo.cs
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.dll
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\refint\ConsoleApp18.dll
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.pdb
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ConsoleApp18.genruntimeconfig.cache
+C:\Users\ASUS\OneDrive\Desktop\CProject\CSharp\UnityCode\0. UnityStudy\UnityC#study\ConsoleApp1\ConsoleApp18\obj\Debug\net6.0\ref\ConsoleApp18.dll
