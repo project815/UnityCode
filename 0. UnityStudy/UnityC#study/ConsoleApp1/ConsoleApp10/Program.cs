@@ -31,7 +31,8 @@ namespace CSharp
     
     class Archer
     { 
-    
+            public int hp;
+        public int attack;
     }
 
     class Knight
@@ -98,12 +99,6 @@ namespace CSharp
 
 
             //얕은 복사, 깊은 복사?
-
-
-
-            //뷰포리아, 안드로이드 멀티플랫폼
-            //레이아웃 안드로이드 지도나오게
-            //websocket 찾아보기
         }
     }
 }
