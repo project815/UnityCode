@@ -9,7 +9,6 @@ namespace CSharp
     
     class Program
     {
-
         //https://glassnabi.tistory.com/8
         //스택과 힙
         //박싱(Boxing)은 스택에서 힙으로 메모리가 옮겨 가는 것,
