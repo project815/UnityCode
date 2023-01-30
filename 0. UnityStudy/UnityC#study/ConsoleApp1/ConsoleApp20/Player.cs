@@ -13,33 +13,16 @@ namespace ConsoleApp20
         Mage = 2,
         Archer = 3,
     }
-    internal class Player
+    internal class Player : Creature
     {
         protected PlayerType _type;
-        protected int hp = 0 ;
-        protected int attack = 0;
 
-        protected Player (PlayerType type)
+
+        protected Player(PlayerType type) : base(CreatureType.Player)
         {
             _type = type;
         }
-        public void SetInfo(int hp, int attack)
-        {
-            this.hp = hp;
-            this.attack = attack;
-        }
-        public int GetHp() { return hp; }
-        public int GetAttack() { return attack; }
 
-        public bool IsDead() 
-        {
-            return hp <= 0;
-        }
-        public void OnDamage(int attack)
-        {
-            hp -= attack;
-            if (hp < 0) hp = 0;
-        }
     }
     class Knight : Player
     {
