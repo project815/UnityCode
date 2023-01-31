@@ -38,7 +38,7 @@ namespace ConsoleApp20
         public void OnDamage(int attack)
         {
             hp -= attack;
-            if (hp < 0) hp = 0;
+            if (hp <= 0) hp = 0;
         }
     }
 }

@@ -13,13 +13,12 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            Player player1 = new Knight();
-            Player player2 = new Archer();
+            Game game = new Game();
 
-            Monster monster1 = new Orc();
-
-            int damage = player1.GetAttack();
-            monster1.OnDamage(damage);
+            while(true)
+            {
+                game.Process();
+            }
         }
     }
 }
