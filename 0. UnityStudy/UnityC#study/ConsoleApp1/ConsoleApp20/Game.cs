@@ -68,6 +68,7 @@ namespace ConsoleApp20
                 case "1":
                     mode = GameMode.Feild;
                     break;
+
                 case "2":
                     mode = GameMode.Lobby;
                     break;
