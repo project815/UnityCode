@@ -24,7 +24,7 @@ namespace ConsoleApp20
         public MonsterType GetMonsterType() { return _monsterType; }
   
     }
-    class Simle : Monster
+    class Slime : Monster
     {
         public Simle() : base(MonsterType.Simle) {
             SetInfo(10, 1);

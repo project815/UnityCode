@@ -19,6 +19,8 @@ namespace ConsoleApp20
     {
         private GameMode mode = GameMode.Lobby;
         private Player player;
+        private Monster monster;
+        private Random rand = new Random();
         public void Process()
         {
             switch(mode)
@@ -71,6 +73,36 @@ namespace ConsoleApp20
 
                 case "2":
                     mode = GameMode.Lobby;
+                    break;
+            }
+        }
+        public void ProcessField()
+        {
+            Console.WriteLine("필드에 입장했습니다.");
+            Console.WriteLine("[1] 싸우기");
+            Console.WriteLine("[2] 일정 확률로 마을 돌아가기");
+
+            CreateRandomMonster();
+            string r
+        }
+
+        private void CreateRandomMonster()
+        {
+            int randValue = rand.Next(0, 3);
+
+            switch (randValue)
+            {
+                case 0:
+                    monster = new Slime();
+                    Console.WriteLine("슬라임이 생성되었습니다.");
+                    break;
+                case 1:
+                    monster = new Orc();
+                    Console.WriteLine("오크가 생성되었습니다.");
+                    break;
+                case 2:
+                    monster = new Skeleton();
+                    Console.WriteLine("스켈레톤이 생성되었습니다.");
                     break;
             }
         }
