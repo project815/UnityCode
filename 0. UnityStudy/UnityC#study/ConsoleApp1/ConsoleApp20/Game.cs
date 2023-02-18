@@ -83,7 +83,7 @@ namespace ConsoleApp20
             Console.WriteLine("[2] 일정 확률로 마을 돌아가기");
 
             CreateRandomMonster();
-            string r
+            string r;
         }
 
         private void CreateRandomMonster()
